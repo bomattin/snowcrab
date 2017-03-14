@@ -54,12 +54,14 @@ impl TermControl {
     }
 
     fn input_capture(&mut self) {
-        let fuck = self.stdin.read(&mut self.key_buf);
+        let keycount = self.stdin.read(&mut self.key_buf);
 
-        match fuck {
+        match keycount {
             Ok(n)   =>  writeln!(self.stdout, "{}{:?}", cursor::Goto(2,2), &self.key_buf).unwrap(),
             Err(e)  =>  writeln!(self.stdout, "{}Error : {:?}", cursor::Goto(10,10), e).unwrap()
         }
+
+        self.key_buf = [0;4];
     }
 
     pub fn run(&mut self) {
