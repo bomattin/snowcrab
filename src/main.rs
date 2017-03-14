@@ -16,3 +16,5 @@ fn main() {
     println!("{}", clear::All);
 
 }
+
+// TODO: Let's build a command factory! https://en.wikipedia.org/wiki/Command_pattern#Java

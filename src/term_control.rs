@@ -9,6 +9,8 @@ use std::io::{Read, Write, stdout, Stdout, stdin};
 use std::thread::sleep;
 use std::time::Duration;
 
+// TODO: Offer options for Async In and Raw Out, with flags to indicate their state.
+
 pub struct TermControl {
     stdin: AsyncReader,
     stdout: RawTerminal<Stdout>,
@@ -18,7 +20,6 @@ pub struct TermControl {
     width: u16,
     height: u16
 }
-// Should ultimately put "state" in a struct to make borrowing, etc, of stdin and like easier.
 
 impl TermControl {
     pub fn new() -> TermControl {
