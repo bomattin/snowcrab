@@ -1,11 +1,11 @@
-use constants::{BOX_CHARS_BLD, BOX_CHARS_STD};
+/// Terminal control
 
-use termion::{async_stdin, color, style, clear, terminal_size, cursor, AsyncReader};
+use constants::BOX_CHARS_BLD;
+
+use termion::{async_stdin, clear, terminal_size, cursor, AsyncReader};
 use termion::raw::{RawTerminal, IntoRawMode};
-use termion::event::Key;
-use termion::input::TermRead;
 
-use std::io::{Read, Write, stdout, Stdout, stdin};
+use std::io::{Read, Write, stdout, Stdout};
 use std::thread::sleep;
 use std::time::Duration;
 

@@ -6,3 +6,4 @@ license = "GPL-3.0"
 
 [dependencies]
 termion = "1.0"
+hyper = "0.10.5"

@@ -1,7 +1,10 @@
 extern crate termion;
+extern crate hyper;
 
 mod constants;
 mod term_control;
+mod command;
+mod web_control;
 
 use term_control::TermControl;
 use termion::clear;
